@@ -1,1 +1,1 @@
-web: python compareprice.py $PORT
+web: python compareprice.py 8080

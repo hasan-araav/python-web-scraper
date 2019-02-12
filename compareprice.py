@@ -56,11 +56,11 @@ class Download(Resource):
 	def get(self):
 		return excel.make_response_from_array(data, "csv",file_name="export_data")
 
-api.add_resource(Data, '/data')
+api.add_resource(Data, '/')
 api.add_resource(Download, '/download')
 
 if __name__ == '__main__':
 	excel.init_excel(app)
-	app.run(port='5002')
+	app.run(port='8080')
 
 # dfd
