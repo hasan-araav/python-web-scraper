@@ -55,9 +55,3 @@ def index():
 @app.route('/download')
 def download():
 	return excel.make_response_from_array(data, "csv",file_name="export_data")
-
-if __name__ == '__main__':
-	excel.init_excel(app)
-	app.run()
-
-# dfd
