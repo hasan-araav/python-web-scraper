@@ -47,20 +47,11 @@ def getContent():
 		]
 		data.append(datas)
 
-class Data(Resource):
-	def get(self):
-		getContent()
-		return jsonify(data)
+@app.route('/')
+def index():
+	getContent()
+	return jsonify(data)
 
-class Download(Resource):
-	def get(self):
-		return excel.make_response_from_array(data, "csv",file_name="export_data")
-
-api.add_resource(Data, '/')
-api.add_resource(Download, '/download')
-
-if __name__ == '__main__':
-	excel.init_excel(app)
-	app.run()
-
-# dfd
+@app.route('/download')
+def download():
+	return excel.make_response_from_array(data, "csv",file_name="export_data") 

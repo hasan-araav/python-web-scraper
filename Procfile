@@ -1,1 +1,1 @@
-web: python compareprice.py
+web: gunicorn deploy:app
