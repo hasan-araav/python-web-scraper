@@ -1,1 +1,1 @@
-web: python compareprice.py 8080
+web: python compareprice.py
