@@ -61,6 +61,6 @@ api.add_resource(Download, '/download')
 
 if __name__ == '__main__':
 	excel.init_excel(app)
-	app.run(port='8080')
+	app.run()
 
 # dfd
